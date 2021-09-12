@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>MedicineX</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+        {% load static %} <img src="{% static "api\images\mayur.jpg" %}"  alt="" width="290" height="74" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
+  <div class="container my-1">
+ <div class="row">
+  <div class="col-sm-2 border-end">
+   </ul>
+  </div>
+  <div class="col-sm-8 offset-sm-1">
+   <form action="" method="post" enctype="multipart/form-data" >
+   {% csrf_token %}
+      <div class='form-group col-lg-6 mb-6'>
+      <h3 style='color:orange;'> Order Medicine from Mayur Medical</h3>
+      <form>
+        <div class="form-control">
+            <label for="customer_name">Your Name</label>
+            <input type="text" class="form-control" id="customer_name" placeholder="Enter your name", name='customer_name'>
+          </div>
+          <div class="form-control">
+            <label for="product_name">Medicine Name (Description)</label>
+            <textarea class="form-control" id="product_name" rows="3" name='product_name'></textarea>
+          </div>
+          <div class="form-control">
+            <label for="customer_address">Delivery Address</label>
+            <textarea class="form-control" id="customer_address" rows="3" name='customer_address'></textarea>
+          </div>
+          <div class="form-control">
+            <label for="customer_phone">Mobile No. </label>
+            <input  class="form-control" id="customer_phone" placeholder="Enter your mobile number", name='customer_phone' type="tel" maxlength="10" minlength="10"required>
+          </div>
+          <div class="form-control">
+            <div class="form-control">
+              <input type="file" id='image' name='image'>
+              <label for="image">Prescription</label>
+            </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+        <div class="col-12 mt-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+    
+  
+  </div>
+ </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>

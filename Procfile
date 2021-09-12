@@ -1,0 +1,1 @@
+web: waitress-serve --port=$PORT MedicineAPI2.wsgi:application 
